@@ -1,6 +1,6 @@
 ## App UML Diagram
 
-[modifier le diagram sur plantUML](http://www.plantuml.com/plantuml/uml/RP2nJWCn38RtF4LqOwKRM9awiB0nb0Sm5nSCZdDoV0M4U7USg50YTKhovVEVsFjgeBPb3Wj3hV6neiQl46U1ZF4sLbEIPpzZ1kB_O7NzlMXozhjrgeNHoMij4hxFcGUeRptJo7W8JLWNfTMeY6F33-iG4fCqCO7XWJ8skYaqxqplnL1FmEr9ND7e-btlxixP6EQuewTI-E-R3qKIAbYvFe2buF582w6OOnBpmj1RctPJtCrpNoyXBe5YL6GmJ27qoKut5xNLklG29umPv7Cqnh31swEaBVCF) (Lien à mettre à jour à chaques modifications)
+[modifier le diagram sur plantUML](http://www.plantuml.com/plantuml/uml/RP2nJWCn38RtF4LqOwKRM9awiB0nb0Sm5nSCZdDoV0M4U7USg50YTKhovVEVsFjgeBPb3Wj3hV6neiQl46U1ZF4sLbEIPpzZ1kB_O7NzlMXozhjrgeNHoMij4hxFcGUeRptJo7W8JLWNfTMeY6F33-iG4fCqCO7XWJ8skYaqxqplnL1FmEr9ND7e-btlxixP6EQuewTI-E-R3qKIAbYvFe2buF582w6OOnBpmj1RctPJtCrpNoyXBe5YL6GmJ27qoKut5xNLklG29umPv7Cqnh31swEaBVCF) (Lien à mettre à jour à chaques modification)
 
 ![App UML Diagram](http://www.plantuml.com/plantuml/png/RP2nJWCn38RtF4LqOwKRM9awiB0nb0Sm5nSCZdDoV0M4U7USg50YTKhovVEVsFjgeBPb3Wj3hV6neiQl46U1ZF4sLbEIPpzZ1kB_O7NzlMXozhjrgeNHoMij4hxFcGUeRptJo7W8JLWNfTMeY6F33-iG4fCqCO7XWJ8skYaqxqplnL1FmEr9ND7e-btlxixP6EQuewTI-E-R3qKIAbYvFe2buF582w6OOnBpmj1RctPJtCrpNoyXBe5YL6GmJ27qoKut5xNLklG29umPv7Cqnh31swEaBVCF "App UML Diagram")
 
@@ -9,7 +9,7 @@
 
 [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables)
 
-| name            | route             |
+| **name**            | **route**             |
 |-----------------|-------------------|
 | homepage        | /                 |
 | todolist        | /todolist         |
