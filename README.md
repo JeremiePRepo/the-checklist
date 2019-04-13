@@ -8,6 +8,7 @@
 
 
 [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables)
+
 | name            | route             |
 |-----------------|-------------------|
 | homepage        | /                 |
