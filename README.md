@@ -27,7 +27,7 @@
 
 ### Version Alpha 0.1+
 
-1. [ ] Fonctionnalités de base
+1. Fonctionnalités de base
     1. [ ] Créer le controlleur et la vue principale (Todolist)
     2. [ ] Créer l'entité Task
     3. [ ] Formulaire de création de tâche
@@ -36,8 +36,8 @@
     5. [ ] Suppression d'une tâche
     6. [ ] Modification d'une tâche
     7. [ ] Valider une tâche
-2. [ ] Intégration d'un template
-3. [ ] Pondérateurs
+2. Intégration d'un template
+3. Pondérateurs
     1. [ ] Créer l'entité Ponderator
     2. [ ] Vue gestion des pondérateurs
     3. [ ] Ajouter un pondérateur
@@ -48,7 +48,7 @@
 
 ### Version Beta 0.4+
 
-4. [ ] Ajout des utilisateurs
+4. Ajout des utilisateurs
     1. [ ] Création de l'entité User
     2. [ ] Formulaire d'inscription
     3. [ ] Login
