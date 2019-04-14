@@ -1,8 +1,8 @@
 ## App UML Diagram
 
-[modifier le diagram sur plantUML](http://www.plantuml.com/plantuml/uml/RP2nJWCn38RtF4LqOwKRM9awiB0nb0Sm5nSCZdDoV0M4U7USg50YTKhovVEVsFjgeBPb3Wj3hV6neiQl46U1ZF4sLbEIPpzZ1kB_O7NzlMXozhjrgeNHoMij4hxFcGUeRptJo7W8JLWNfTMeY6F33-iG4fCqCO7XWJ8skYaqxqplnL1FmEr9ND7e-btlxixP6EQuewTI-E-R3qKIAbYvFe2buF582w6OOnBpmj1RctPJtCrpNoyXBe5YL6GmJ27qoKut5xNLklG29umPv7Cqnh31swEaBVCF) (Lien à mettre à jour à chaques modification)
+[modifier le diagram sur plantUML](http://www.plantuml.com/plantuml/uml/RP6nJWCn38RtF4NKiT8Dh4mTMDWOoWEOv2yrpJadnoqWnBlZYmf7fPlkykNpdzZPDIEryrX2AjHQV6xG-1NY83GYtiTcolBgQup4vJ-ON7-lcftz_ZhLMk3ahLK9tzVCFRLJppIsSXEQqPBoP5p5iU73EgHSME0aas7F8sPwLhfwCtqKWrwep4TYWl7wNk_kmTbjM3eYdP0TljHQ_YxwL2L3oUhw25B5uS298UQOnRmmzEOssqtS3aF_BY4kaI8g2Xbo27sscxj5dMjTEj85SIJvN8pLiCNRGRA_sGy0) (Lien à mettre à jour à chaques modification)
 
-![App UML Diagram](http://www.plantuml.com/plantuml/png/RP2nJWCn38RtF4LqOwKRM9awiB0nb0Sm5nSCZdDoV0M4U7USg50YTKhovVEVsFjgeBPb3Wj3hV6neiQl46U1ZF4sLbEIPpzZ1kB_O7NzlMXozhjrgeNHoMij4hxFcGUeRptJo7W8JLWNfTMeY6F33-iG4fCqCO7XWJ8skYaqxqplnL1FmEr9ND7e-btlxixP6EQuewTI-E-R3qKIAbYvFe2buF582w6OOnBpmj1RctPJtCrpNoyXBe5YL6GmJ27qoKut5xNLklG29umPv7Cqnh31swEaBVCF "App UML Diagram")
+![App UML Diagram](http://www.plantuml.com/plantuml/png/RP6nJWCn38RtF4NKiT8Dh4mTMDWOoWEOv2yrpJadnoqWnBlZYmf7fPlkykNpdzZPDIEryrX2AjHQV6xG-1NY83GYtiTcolBgQup4vJ-ON7-lcftz_ZhLMk3ahLK9tzVCFRLJppIsSXEQqPBoP5p5iU73EgHSME0aas7F8sPwLhfwCtqKWrwep4TYWl7wNk_kmTbjM3eYdP0TljHQ_YxwL2L3oUhw25B5uS298UQOnRmmzEOssqtS3aF_BY4kaI8g2Xbo27sscxj5dMjTEj85SIJvN8pLiCNRGRA_sGy0 "App UML Diagram")
 
 ## Navigation/routes
 
@@ -28,8 +28,8 @@
 ### Version Alpha 0.1+
 
 1. Fonctionnalités de base
-    1. [ ] Créer le controlleur et la vue principale (Todolist)
-    2. [ ] Créer l'entité Task
+    1. [X] Créer le controlleur et la vue principale (Todolist)
+    2. [X] Créer l'entité Task
     3. [ ] Formulaire de création de tâche
     4. [ ] Affichage des tâches dans la vue principale
     7. [ ] Navigation principale
