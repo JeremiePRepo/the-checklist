@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une tâche{% endblock %}
+
+{% block body %}
+<!--todo/add_form-->
+{{ form_start(add_form) }}
+{{ form_errors(add_form) }}
+{{ form_row(add_form.title) }}
+{{ form_row(add_form.description) }}
+{{ form_row(add_form.deadline) }}
+{{ form_row(add_form.duration) }}
+{{ form_row(add_form.repetition) }}
+{{ form_row(add_form.startDate) }}
+{{ form_row(add_form.checked) }}
+<input type="submit" value="Envoyer">
+{{ form_end(add_form) }}
+<!--/todo/add_form-->
+{% endblock %}
