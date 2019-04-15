@@ -39,6 +39,7 @@
     7. [ ] Afficher toutes les infos d'une tâche
     8. [ ] Faire la route switch_check dans le TodoController
 2. Intégration d'un template
+    1. todo_index
 3. Pondérateurs
     1. [ ] Créer l'entité Ponderator
     2. [ ] Vue gestion des pondérateurs
