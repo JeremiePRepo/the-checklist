@@ -34,7 +34,7 @@
     4. [X] Affichage des tâches dans la vue principale
     7. [X] Navigation principale
     5. [X] Suppression d'une tâche
-    6. [ ] Modification d'une tâche
+    6. [X] Modification d'une tâche
     7. [ ] Valider une tâche
 2. Intégration d'un template
 3. Pondérateurs

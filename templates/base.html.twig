@@ -24,7 +24,7 @@
         {% endblock %}
     </nav>
     {% block info_message %}
-    {% for flashMessage in app.session.flashbag.get('error') %}
+    {% for flashMessage in app.session.flashbag.get('info') %}
     {{ flashMessage }}
     {% endfor %}
 

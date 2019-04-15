@@ -26,7 +26,7 @@ class TodoController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="todo_add")
+     * @Route("/add", name="add")
      */
     public function todoAdd(Request $request)
     {
@@ -45,9 +45,32 @@ class TodoController extends AbstractController
             return $this->redirectToRoute('todo_index');
         }
 
-
         return $this->render('todo/todo_add.html.twig', [
             'add_form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/edit/{id}", name="edit", requirements={"id":"\d+"})
+     */
+    public function todoEdit(Task $task, Request $request)
+    {
+        // Prépare la création d'un nouveau commentaire
+        $form = $this->createForm(TaskType::class, $task);
+
+        // On traite le formulaire s’il a été remplis
+        $form->handleRequest($request);
+        if( $form->isSubmitted() && $form->isValid() ) {
+            // Si le formulaire a été envoyé
+            $manager = $this->getDoctrine()->getManager();
+            $manager->persist($task);
+            $manager->flush();
+            $this->addFlash("info","Commentaire modifié");
+            return $this->redirectToRoute('todo_index');
+        }
+
+        return $this->render('todo/todo_edit.html.twig', [
+            'edit_form' => $form->createView()
         ]);
     }
 
