@@ -8,20 +8,25 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+/** @Route("/todolist", name="todo_") */
 class TodoController extends AbstractController
 {
     /**
-     * @Route("/todolist", name="todo")
+     * @Route("/", name="index")
      */
     public function index()
     {
+        $tasks = $this->getDoctrine()->getRepository(Task::class)->findAll();
         return $this->render('todo/index.html.twig', [
-            'controller_name' => 'TodoController',
-        ]);
+                'tasks' => $tasks,
+            ]);
+        // return $this->render('todo/index.html.twig', [
+        //     'controller_name' => 'TodoController',
+        // ]);
     }
 
     /**
-     * @Route("/todolist/add", name="todo_add")
+     * @Route("/add", name="todo_add")
      */
     public function todoAdd(Request $request)
     {
@@ -37,12 +42,26 @@ class TodoController extends AbstractController
             $manager->persist($task);
             $manager->flush();
             $this->addFlash("info","Commentaire ajouté");
-            return $this->redirectToRoute('todo');
+            return $this->redirectToRoute('todo_index');
         }
 
 
         return $this->render('todo/todo_add.html.twig', [
             'add_form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @route("/delete/{id}", name="delete", requirements={"id":"\d+"})
+     */
+    public function delete(Task $task)
+    {
+        $manager = $this->getDoctrine()->getManager();
+        $manager->remove($task);
+        $manager->flush();
+
+        $this->addFlash("info","La tâche a bien été supprimé");
+
+        return $this->redirectToRoute('todo_index');
     }
 }

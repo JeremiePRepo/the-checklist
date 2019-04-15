@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+    <nav>
+        {% block navigation %}
+        <ul>
+            <li>
+                <a href="/">homepage</a>
+            </li>
+            <li>
+                <a href="/todolist">todolist</a>
+            </li>
+            <li>
+                <a href="/todolist/add">ajouter une tâche</a>
+            </li>
+        </ul>
+        {% endblock %}
+    </nav>
+    {% block info_message %}
+    {% for flashMessage in app.session.flashbag.get('error') %}
+    {{ flashMessage }}
+    {% endfor %}
+
+    {% endblock %}
+    {% block body %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+</body>
+
 </html>

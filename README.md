@@ -30,10 +30,10 @@
 1. Fonctionnalités de base
     1. [X] Créer le controlleur et la vue principale (Todolist)
     2. [X] Créer l'entité Task
-    3. [ ] Formulaire de création de tâche
-    4. [ ] Affichage des tâches dans la vue principale
-    7. [ ] Navigation principale
-    5. [ ] Suppression d'une tâche
+    3. [X] Formulaire de création de tâche
+    4. [X] Affichage des tâches dans la vue principale
+    7. [X] Navigation principale
+    5. [X] Suppression d'une tâche
     6. [ ] Modification d'une tâche
     7. [ ] Valider une tâche
 2. Intégration d'un template
