@@ -3,6 +3,7 @@
 {% block title %}Hello TodoController!{% endblock %}
 
 {% block body %}
+<!--todo/index.body-->
 <style>
     .example-wrapper {
         margin: 1em auto;
@@ -22,11 +23,25 @@
     <ul>
         {% for task in tasks %}
         <li>
+            {% if task.checked %}
+            </del>
+            {% endif %}
+
             {{ task.title }}
-            <a href="{{ path('todo_delete', {'id' : task.id}) }}">[X]</a>
             <a href="{{ path('todo_edit', {'id' : task.id}) }}">[Éditer]</a>
+            <a href="{{ path('todo_delete', {'id' : task.id}) }}">[X]</a>
+            {% if task.checked %}
+            <a href="{{ path('todo_check', {'id' : task.id}) }}">&#x2610;</a>
+            {% else %}
+            <a href="{{ path('todo_uncheck', {'id' : task.id}) }}">[&#x2611;]</a>
+            {% endif %}
+
+            {% if task.checked %}
+            </del>
+            {% endif %}
         </li>
         {% endfor %}
     </ul>
 </div>
+<!--/todo/index.body-->
 {% endblock %}

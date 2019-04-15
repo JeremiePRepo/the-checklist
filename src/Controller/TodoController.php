@@ -87,4 +87,36 @@ class TodoController extends AbstractController
 
         return $this->redirectToRoute('todo_index');
     }
+
+    /**
+     * @route("/check/{id}", name="check", requirements={"id":"\d+"})
+     */
+    public function check(Task $task)
+    {
+        $task = $task->setChecked(false);
+
+        $manager = $this->getDoctrine()->getManager();
+        $manager->persist($task);
+        $manager->flush();
+        $this->addFlash("info","Commentaire coché");
+
+        return $this->redirectToRoute('todo_index');    
+    }
+
+    /**
+     * @route("/uncheck/{id}", name="uncheck", requirements={"id":"\d+"})
+     */
+    public function unCheck(Task $task)
+    {
+        $task = $task->setChecked(true);
+
+        $manager = $this->getDoctrine()->getManager();
+        $manager->persist($task);
+        $manager->flush();
+        $this->addFlash("info","Commentaire dé-coché");
+
+        return $this->redirectToRoute('todo_index');    
+    }
+
+    // TODO : Faire un controller switch_check
 }

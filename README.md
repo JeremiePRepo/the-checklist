@@ -35,7 +35,9 @@
     7. [X] Navigation principale
     5. [X] Suppression d'une tâche
     6. [X] Modification d'une tâche
-    7. [ ] Valider une tâche
+    7. [X] Valider une tâche
+    7. [ ] Afficher toutes les infos d'une tâche
+    8. [ ] Faire la route switch_check dans le TodoController
 2. Intégration d'un template
 3. Pondérateurs
     1. [ ] Créer l'entité Ponderator
