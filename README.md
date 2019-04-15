@@ -48,7 +48,7 @@
     6. [ ] Ajouter/enlever des pondérateurs aux tâches
     7. [ ] Ordonner les tâches
 
-### Version Beta 0.4+
+### Version Alpha 0.4+
 
 4. Ajout des utilisateurs
     1. [ ] Création de l'entité User
