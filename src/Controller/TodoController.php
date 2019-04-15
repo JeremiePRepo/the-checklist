@@ -29,9 +29,6 @@ class TodoController extends AbstractController
         return $this->render('todo/index.html.twig', [
             'tasks' => $tasks,
         ]);
-        // return $this->render('todo/index.html.twig', [
-        //     'controller_name' => 'TodoController',
-        // ]);
     }
 
     /**
