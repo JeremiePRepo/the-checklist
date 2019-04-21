@@ -47,7 +47,7 @@ class Task
     private $startDate;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $checked;
 

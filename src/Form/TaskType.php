@@ -14,11 +14,11 @@ class TaskType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
+            ->add('checked')
             // ->add('deadline')
             // ->add('duration')
             // ->add('repetition')
             // ->add('startDate')
-            // ->add('checked')
         ;
     }
 
