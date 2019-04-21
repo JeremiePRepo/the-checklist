@@ -42,6 +42,7 @@
     1. [ ] todo/index
     1. [ ] todo/todo_add
     1. [ ] todo/todo_add
+    4. [ ] Ajouter les messages d'alertes/info
 3. Pondérateurs
     1. [ ] Créer l'entité Ponderator
     2. [ ] Vue gestion des pondérateurs

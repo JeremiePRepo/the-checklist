@@ -5,59 +5,32 @@
 
 {% block body %}
     <!--todo/index.body-->
-    <style>
-        .example-wrapper {
-            margin: 1em auto;
-            max-width: 800px;
-            width: 95%;
-            font: 18px / 1.5 sans-serif;
-        }
-
-        .example-wrapper code {
-            background: #F5F5F5;
-            padding: 2px 6px;
-        }
-    </style>
-
-    <div class="wrapper">
-        <h1>Hello</h1>
-        <ul>
-            {% for task in tasks %}
-                <li>
-                    {% if task.checked %}
-                        <del>
-                        {% endif %}
-
-                        {{ task.title }}
-                        <a href="{{ path('todo_edit', {'id' : task.id}) }}">[Éditer]</a>
-                        {% if task.deadline %}
-                            | Deadline :
-                            {{ task.deadline|date('Y-m-d') }}
-                        {% endif %}
-                        {% if task.duration %}
-                            | Temps estimé :
-                            {{ task.duration|date('Y-m-d') }}
-                        {% endif %}
-                        {% if task.repetition %}
-                            | Répétition :
-                            {{ task.repetition|date('Y-m-d') }}
-                        {% endif %}
-                        {% if task.startDate %}
-                            | startDate :
-                            {{ task.startDate|date('Y-m-d') }}
-                        {% endif %}
-                        <a href="{{ path('todo_delete', {'id' : task.id}) }}">[X]</a>
-                        {% if task.checked %}
-                            <a href="{{ path('todo_check', {'id' : task.id}) }}">&#x2610;</a>
-                        {% else %}
-                            <a href="{{ path('todo_uncheck', {'id' : task.id}) }}">[&#x2611;]</a>
-                        {% endif %}
-                        <p>{{ task.description }}</p>
-
-                        {% if task.checked %}
-                        </del>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    </div><!--/todo/index.body-->{% endblock %}
+    <div class="todo-list">
+        <div class="tdl-holder">
+            <div class="tdl-content">
+                <ul>
+                    {% for task in tasks %}
+                        <li>
+                            <label>
+                                <input {% if task.checked %} checked {% endif %} type="checkbox"><i class="check-box"></i>
+                                <span class="h3 text-secondary">{{ task.title }}</span>
+                                <span>
+                                    {% if task.deadline %}Deadline : {{ task.deadline|date('Y-m-d') }} {% endif %}
+                                    {% if task.duration %}Temps estimé : {{ task.duration|date('Y-m-d') }} {% endif %}
+                                    {% if task.repetition %} Répétition : {{ task.repetition|date('Y-m-d') }} {% endif %}
+                                    {% if task.startDate %} startDate : {{ task.startDate|date('Y-m-d') }} {% endif %}
+                                </span>
+                                <a class="fa fa-times" href='{{ path('todo_delete', {'id' : task.id}) }}'></a>
+                                <a class="fa fa-pencil" href='{{ path('todo_edit', {'id' : task.id}) }}'></a>
+                                {# {% if task.checked %}color icon{% endif %} #}
+                                <a class="fa fa-check" href='#'></a>
+                                {# <p>{{ task.description }}</p> #}
+                            </label>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--/todo/index.body-->
+{% endblock %}
