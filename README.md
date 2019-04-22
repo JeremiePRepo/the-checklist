@@ -39,10 +39,12 @@
     7. [X] Afficher toutes les infos d'une tâche
     8. [ ] Faire la route switch_check dans le TodoController
 2. Intégration d'un template
-    1. [ ] todo/index
-    1. [ ] todo/todo_add
-    1. [ ] todo/todo_add
-    4. [ ] Ajouter les messages d'alertes/info
+    - [X] todo/index
+    - [X] todo/todo_add
+    - [X] todo/todo_edit
+    - [ ] Navigation
+    - [ ] Ajouter les messages d'alertes/info
+    - [ ] Nettoyer les éléments inutiles
 3. Pondérateurs
     1. [ ] Créer l'entité Ponderator
     2. [ ] Vue gestion des pondérateurs
