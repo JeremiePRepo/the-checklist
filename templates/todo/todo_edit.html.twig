@@ -14,11 +14,14 @@
         <div class="col col-md-3"><label for="text-input" class=" form-control-label">{{ form_label(edit_form.description) }}</label></div>
         <div class="col-12 col-md-9">{{ form_widget(edit_form.description, { 'attr': {'class': 'form-control'} }) }}</div>
     </div>
+    {# <div class="row form-group">
+        <div class="col col-md-3"><label for="text-input" class=" form-control-label">{{ form_label(edit_form.checked) }}</label></div>
+        <div class="col-12 col-md-9">{{ form_widget(edit_form.checked, { 'attr': {'class': 'form-control'} }) }}</div>
+    </div> #}
     {# {{ form_row(edit_form.deadline) }}
     {{ form_row(edit_form.duration) }}
     {{ form_row(edit_form.repetition) }}
     {{ form_row(edit_form.startDate) }}#}
-    {{ form_row(edit_form.checked) }}
     <input type="submit" value="Envoyer">
 {{ form_end(edit_form) }}
 <!--/todo/edit_form-->

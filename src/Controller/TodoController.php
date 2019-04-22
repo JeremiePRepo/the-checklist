@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
+use App\Form\EditTaskType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,9 +15,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  * todo_edit
  * todo_delete
  * todo_check
- * todo_uncheck
- *  
- * @Route("/todolist", name="todo_") 
+ * todo_uncheck.
+ *
+ * @Route("/todolist", name="todo_")
  * */
 class TodoController extends AbstractController
 {
@@ -26,6 +27,7 @@ class TodoController extends AbstractController
     public function index()
     {
         $tasks = $this->getDoctrine()->getRepository(Task::class)->findAll();
+
         return $this->render('todo/index.html.twig', [
             'tasks' => $tasks,
         ]);
@@ -47,12 +49,13 @@ class TodoController extends AbstractController
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($task);
             $manager->flush();
-            $this->addFlash("info", "Commentaire ajouté");
+            $this->addFlash('info', 'Commentaire ajouté');
+
             return $this->redirectToRoute('todo_index');
         }
 
         return $this->render('todo/todo_add.html.twig', [
-            'add_form' => $form->createView()
+            'add_form' => $form->createView(),
         ]);
     }
 
@@ -61,7 +64,7 @@ class TodoController extends AbstractController
      */
     public function Edit(Task $task, Request $request)
     {
-        // Prépare la création d'un nouveau commentaire
+        // Prépare le formulaire
         $form = $this->createForm(TaskType::class, $task);
 
         // On traite le formulaire s’il a été remplis
@@ -71,12 +74,13 @@ class TodoController extends AbstractController
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($task);
             $manager->flush();
-            $this->addFlash("info", "Commentaire modifié");
+            $this->addFlash('info', 'Commentaire modifié');
+
             return $this->redirectToRoute('todo_index');
         }
 
         return $this->render('todo/todo_edit.html.twig', [
-            'edit_form' => $form->createView()
+            'edit_form' => $form->createView(),
         ]);
     }
 
@@ -89,7 +93,7 @@ class TodoController extends AbstractController
         $manager->remove($task);
         $manager->flush();
 
-        $this->addFlash("info", "La tâche a bien été supprimé");
+        $this->addFlash('info', 'La tâche a bien été supprimé');
 
         return $this->redirectToRoute('todo_index');
     }
@@ -104,7 +108,7 @@ class TodoController extends AbstractController
         $manager = $this->getDoctrine()->getManager();
         $manager->persist($task);
         $manager->flush();
-        $this->addFlash("info", "Commentaire coché");
+        $this->addFlash('info', 'Commentaire coché');
 
         return $this->redirectToRoute('todo_index');
     }
@@ -119,7 +123,7 @@ class TodoController extends AbstractController
         $manager = $this->getDoctrine()->getManager();
         $manager->persist($task);
         $manager->flush();
-        $this->addFlash("info", "Commentaire dé-coché");
+        $this->addFlash('info', 'Commentaire dé-coché');
 
         return $this->redirectToRoute('todo_index');
     }
