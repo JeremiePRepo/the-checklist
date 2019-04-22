@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -50,6 +52,16 @@ class Task
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $checked;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Ponderator", mappedBy="tasks")
+     */
+    private $ponderators;
+
+    public function __construct()
+    {
+        $this->ponderators = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -136,6 +148,34 @@ class Task
     public function setChecked(bool $checked): self
     {
         $this->checked = $checked;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ponderator[]
+     */
+    public function getPonderators(): Collection
+    {
+        return $this->ponderators;
+    }
+
+    public function addPonderator(Ponderator $ponderator): self
+    {
+        if (!$this->ponderators->contains($ponderator)) {
+            $this->ponderators[] = $ponderator;
+            $ponderator->addTask($this);
+        }
+
+        return $this;
+    }
+
+    public function removePonderator(Ponderator $ponderator): self
+    {
+        if ($this->ponderators->contains($ponderator)) {
+            $this->ponderators->removeElement($ponderator);
+            $ponderator->removeTask($this);
+        }
 
         return $this;
     }
