@@ -28,16 +28,16 @@
 ### Version Alpha 0.1+
 
 1. Fonctionnalités de base
-    1. [X] Créer le controlleur et la vue principale (Todolist)
-    2. [X] Créer l'entité Task
-    3. [X] Formulaire de création de tâche
-    4. [X] Affichage des tâches dans la vue principale
-    7. [X] Navigation principale
-    5. [X] Suppression d'une tâche
-    6. [X] Modification d'une tâche
-    7. [X] Valider une tâche
-    7. [X] Afficher toutes les infos d'une tâche
-    8. [ ] Faire la route switch_check dans le TodoController
+    - [X] Créer le controlleur et la vue principale (Todolist)
+    - [X] Créer l'entité Task
+    - [X] Formulaire de création de tâche
+    - [X] Affichage des tâches dans la vue principale
+    - [X] Navigation principale
+    - [X] Suppression d'une tâche
+    - [X] Modification d'une tâche
+    - [X] Valider une tâche
+    - [X] Afficher toutes les infos d'une tâche
+    - [ ] Faire la route switch_check dans le TodoController
 2. Intégration d'un template
     - [X] todo/index
     - [X] todo/todo_add
@@ -46,23 +46,23 @@
     - [ ] Ajouter les messages d'alertes/info
     - [ ] Nettoyer les éléments inutiles
 3. Pondérateurs
-    1. [X] Créer l'entité Ponderator
-    2. [ ] Vue gestion des pondérateurs
-    3. [ ] Ajouter un pondérateur
-    4. [ ] Supprimer
-    5. [ ] Modifier
-    6. [ ] Ajouter/enlever des pondérateurs aux tâches
-    7. [ ] Ordonner les tâches
+    - [X] Créer l'entité Ponderator
+    - [ ] Vue gestion des pondérateurs
+    - [ ] Ajouter un pondérateur
+    - [ ] Supprimer
+    - [ ] Modifier
+    - [ ] Ajouter/enlever des pondérateurs aux tâches
+    - [ ] Ordonner les tâches
 
 ### Version Alpha 0.4+
 
 4. Ajout des utilisateurs
-    1. [ ] Création de l'entité User
-    2. [ ] Formulaire d'inscription
-    3. [ ] Intégration Homepage
-    3. [ ] Login
-    3. [ ] Logout
-    4. [ ] Page Account
-    5. [ ] Associez les autres entités aux Users
+    - [ ] Création de l'entité User
+    - [ ] Formulaire d'inscription
+    - [ ] Intégration Homepage
+    - [ ] Login
+    - [ ] Logout
+    - [ ] Page Account
+    - [ ] Associez les autres entités aux Users
 5. Création de projets
-    1. [ ] Création de l'entité Projects
+    - [ ] Création de l'entité Projects
