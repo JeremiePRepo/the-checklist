@@ -20,9 +20,7 @@ class PonderatorController extends AbstractController
     {
         $ponderators = $this->getDoctrine()->getRepository(Ponderator::class)->findAll();
 
-        return $this->render('ponderator/index.html.twig', [
-            compact('ponderators'),
-        ]);
+        return $this->render('ponderator/index.html.twig', compact('ponderators'));
     }
 
     /**

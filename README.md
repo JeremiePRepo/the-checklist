@@ -48,7 +48,7 @@
 3. Pondérateurs
     - [X] Créer l'entité Ponderator
     - [ ] Vue gestion des pondérateurs
-    - [ ] Ajouter un pondérateur
+    - [X] Ajouter un pondérateur
     - [ ] Supprimer
     - [ ] Modifier
     - [ ] Ajouter/enlever des pondérateurs aux tâches
