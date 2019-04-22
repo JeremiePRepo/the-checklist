@@ -46,7 +46,7 @@
     - [ ] Ajouter les messages d'alertes/info
     - [ ] Nettoyer les éléments inutiles
 3. Pondérateurs
-    1. [ ] Créer l'entité Ponderator
+    1. [X] Créer l'entité Ponderator
     2. [ ] Vue gestion des pondérateurs
     3. [ ] Ajouter un pondérateur
     4. [ ] Supprimer
