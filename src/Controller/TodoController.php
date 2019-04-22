@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
+use App\Entity\Ponderator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -37,24 +38,38 @@ class TodoController extends AbstractController
      */
     public function Add(Request $request)
     {
-        // Prépare la création d'un nouveau commentaire
+        // Prépare la création d'une nouvelle tâche
         $task = new Task();
         $form = $this->createForm(TaskType::class, $task);
 
-        // On traite le formulaire s’il a été remplis
+        // On récupère tous les pondérateurs
+        // $ponderators = $this->getDoctrine()->getRepository(Ponderator::class)->findAll();
+
+        // Le formulaire as-t-il été remplis ?
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            // Si le formulaire a été envoyé
+            // Formulaire validé, traitement
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($task);
+            // dd($task);
+            // foreach ($_POST['task']['ponderators'] as $key => $ponderator) {
+            //     dd($ponderator);
+            //     $manager->persist($ponderators);
+            // }
+            // $request->request->get('ponderators');
+            // $ponderators = $request->parameter('ponderators');
+            // $manager->persist($ponderators);
             $manager->flush();
-            $this->addFlash('info', 'Commentaire ajouté');
+            $this->addFlash('info', 'Nouvelle tâche ajoutée');
 
+            // Redirection
             return $this->redirectToRoute('todo_index');
         }
 
+        // Envoie du formulaire à la vue
         return $this->render('todo/todo_add.html.twig', [
             'add_form' => $form->createView(),
+            // 'ponderators' => $ponderators,
         ]);
     }
 

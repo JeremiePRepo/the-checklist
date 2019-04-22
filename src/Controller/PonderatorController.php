@@ -46,4 +46,28 @@ class PonderatorController extends AbstractController
             'add_form' => $form->createView(),
         ]);
     }
+
+    /**
+     * @Route("/edit/{id}", name="edit")
+     */
+    public function Edit(Request $request)
+    {
+        $ponderator = new Ponderator();
+        $form = $this->createForm(PonderatorType::class, $ponderator);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // Si le formulaire a été envoyé
+            $manager = $this->getDoctrine()->getManager();
+            $manager->persist($ponderator);
+            $manager->flush();
+            $this->addFlash('info', 'Pondérateur ajouté');
+
+            return $this->redirectToRoute('pond_index');
+        }
+
+        return $this->render('ponderator/pond_add.html.twig', [
+            'add_form' => $form->createView(),
+        ]);
+    }
 }

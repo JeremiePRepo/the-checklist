@@ -9,13 +9,14 @@
 
 [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables)
 
-| **name**            | **route**             |
+| **name**        | **route**         |
 |-----------------|-------------------|
 | homepage        | /                 |
 | todolist        | /todolist         |
-| add_task        | /todolist/task    |
+| add_task        | /todolist/add     |
 | edit_task       | /todolist/edit    |
 | ponderators     | /ponderators      |
+| ponderator      | /ponderators/{id} |
 | add_ponderator  | /ponderators/add  |
 | edit_ponderator | /ponderators/edit |
 | login           | /login            |
@@ -45,10 +46,12 @@
     - [ ] Navigation
     - [ ] Ajouter les messages d'alertes/info
     - [ ] Nettoyer les éléments inutiles
-3. Pondérateurs
+3. CRUD Pondérateurs
     - [X] Créer l'entité Ponderator
     - [ ] Vue gestion des pondérateurs
     - [X] Ajouter un pondérateur
+    - [ ] Afficher les pondérateur dans la vue todo_index
+    - [ ] Ajouter des pondérateurs dans le formulaire de création de tâches
     - [ ] Supprimer
     - [ ] Modifier
     - [ ] Ajouter/enlever des pondérateurs aux tâches
@@ -66,3 +69,10 @@
     - [ ] Associez les autres entités aux Users
 5. Création de projets
     - [ ] Création de l'entité Projects
+6. Amélioration de l'interface
+    - [ ] Ajouter formulaire de création de tâches dans la vue todo_index
+    - [ ] Ajouter formulaire de création de pondérateur dans la vue pond_index
+7. AJAX
+    - [ ] Affichage du contenu des tâches au clic pour la vue todo_index 
+    - [ ] Ajout de tâche sans chargement pour la vue todo_index
+    - [ ] Ajout de pondérateur sans chargement pour la vue pond_index

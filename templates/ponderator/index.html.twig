@@ -27,7 +27,9 @@
                     <td>tache 1, tache 2 ...</td>
                     <td>999</td>
                     <td>état</td>
-                    <td>actions</td>
+                    <td>
+                        <a href="{{ path('pond_edit', {'id' : ponderator.id}) }}" class="btn btn-primary btn-sm"><i class="fa fa-lightbulb-o"></i>&nbsp; Éditer</a>
+                    </td>
                 </tr>
             {% endfor %}
             <tr>
@@ -41,9 +43,6 @@
                 <td>  <span class="name">Louis Stanley</span> </td>
                 <td> <span class="product">iMax</span> </td>
                 <td><span class="count">231</span></td>
-                <td>
-                    <span class="badge badge-complete">Complete</span>
-                </td>
             </tr>
         </tbody>
     </table>

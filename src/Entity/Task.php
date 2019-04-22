@@ -54,7 +54,7 @@ class Task
     private $checked;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Ponderator", mappedBy="tasks")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Ponderator", mappedBy="tasks", cascade={"persist"})
      */
     private $ponderators;
 

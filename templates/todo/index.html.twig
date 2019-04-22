@@ -14,12 +14,15 @@
                             <label>
                                 <input {% if task.checked %} checked {% endif %} type="checkbox"><i class="check-box"></i>
                                 <span class="h3 text-secondary">{{ task.title }}</span>
-                                <span>
-                                    {% if task.deadline %}Deadline : {{ task.deadline|date('Y-m-d') }} {% endif %}
-                                    {% if task.duration %}Temps estimé : {{ task.duration|date('Y-m-d') }} {% endif %}
-                                    {% if task.repetition %} Répétition : {{ task.repetition|date('Y-m-d') }} {% endif %}
-                                    {% if task.startDate %} startDate : {{ task.startDate|date('Y-m-d') }} {% endif %}
-                                </span>
+                                {% if task.deadline %}Deadline : {{ task.deadline|date('Y-m-d') }} {% endif %}
+                                {% if task.duration %}Temps estimé : {{ task.duration|date('Y-m-d') }} {% endif %}
+                                {% if task.repetition %} Répétition : {{ task.repetition|date('Y-m-d') }} {% endif %}
+                                {% if task.startDate %} startDate : {{ task.startDate|date('Y-m-d') }} {% endif %}
+                                {% if task.ponderators %}
+                                    {% for ponderator in task.ponderators %}
+                                        <span class="badge badge-primary">{{ ponderator.name }}<span class="badge badge-light">3</span></span>
+                                    {% endfor %}
+                                {% endif %}
                                 <a class="fa fa-times" href='{{ path('todo_delete', {'id' : task.id}) }}'></a>
                                 <a class="fa fa-pencil" href='{{ path('todo_edit', {'id' : task.id}) }}'></a>
                                 {# {% if task.checked %}color icon{% endif %} #}
