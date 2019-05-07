@@ -29,7 +29,7 @@ class Ponderator
     private $coefficient;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Task", inversedBy="ponderators", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="App\Entity\Task", mappedBy="ponderators", cascade={"persist"})
      */
     private $tasks;
 

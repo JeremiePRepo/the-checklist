@@ -7,30 +7,27 @@
 {{ form_start(add_form) }}
 {{ form_errors(add_form) }}
 <div class="row form-group">
-    <div class="col col-md-3"><label for="text-input"
-            class=" form-control-label">{{ form_label(add_form.title) }}</label></div>
+    <div class="col col-md-3">
+        <label for="text-input" class=" form-control-label">{{ form_label(add_form.title) }}</label>
+    </div>
     <div class="col-12 col-md-9">{{ form_widget(add_form.title, { 'attr': {'class': 'form-control'} }) }}</div>
 </div>
 <div class="row form-group">
-    <div class="col col-md-3"><label for="text-input"
-            class=" form-control-label">{{ form_label(add_form.description) }}</label></div>
+    <div class="col col-md-3">
+        <label for="text-input" class=" form-control-label">{{ form_label(add_form.description) }}</label>
+    </div>
     <div class="col-12 col-md-9">{{ form_widget(add_form.description, { 'attr': {'class': 'form-control'} }) }}</div>
 </div>
+
 <div class="row form-group">
-    <div class="col col-md-3"><label class=" form-control-label">Pondérateurs</label></div>
+    <div class="col col-md-3">
+        <label class=" form-control-label">{{ form_label(add_form.ponderators) }}</label>
+    </div>
     <div class="col col-md-9">
-        <div class="form-check">
-            {% for ponderator in ponderators %}
-            <div class="checkbox">
-                <label for="ponderator-{{ponderator.id}}" class="form-check-label ">
-                    <input type="checkbox" id="ponderator-{{ponderator.id}}" name="{{loop.index}}"
-                        value="{{ponderator.id}}" class="form-check-input">{{ponderator.name}}
-                </label>
-            </div>
-            {% endfor %}
-        </div>
+        {{ form_widget(add_form.ponderators, { 'attr': {'class': 'form-control'} }) }}
     </div>
 </div>
+
 {# {{ form_row(add_form.deadline) }}
     {{ form_row(add_form.duration) }}
     {{ form_row(add_form.repetition) }}

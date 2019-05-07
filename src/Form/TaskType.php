@@ -4,14 +4,10 @@ namespace App\Form;
 
 use App\Entity\Task;
 use App\Entity\Ponderator;
-use App\Form\PonderatorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
 class TaskType extends AbstractType
 {
@@ -23,14 +19,9 @@ class TaskType extends AbstractType
             ->add('ponderators', EntityType::class, [
                 'class' => Ponderator::class,
                 'choice_label' => 'name',
+                'expanded' => true,
                 'multiple' => 'true',
             ])
-            // ->add('ponderators', PonderatorType::class, [
-            //     'label' => 'Who is fighting in this round?',
-            // ])
-            // ->add('ponderators', ChoiceType::class, [
-            //     'multiple' => true,
-            // ])
             // ->add('deadline')
             // ->add('duration')
             // ->add('repetition')
