@@ -42,14 +42,15 @@ class TodoController extends AbstractController
         $task = new Task();
         $form = $this->createForm(TaskType::class, $task);
 
-        // On récupère tous les pondérateurs
-        // $ponderators = $this->getDoctrine()->getRepository(Ponderator::class)->findAll();
+        // On récupère les pondérateurs
+        $ponderators = $this->getDoctrine()->getRepository(Ponderator::class)->findAll();
 
-        // Le formulaire as-t-il été remplis ?
+        // On traite le formulaire s’il a été remplis
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             // Formulaire validé, traitement
             $manager = $this->getDoctrine()->getManager();
+            dd($task);
             $manager->persist($task);
             // dd($task);
             // foreach ($_POST['task']['ponderators'] as $key => $ponderator) {
@@ -69,7 +70,7 @@ class TodoController extends AbstractController
         // Envoie du formulaire à la vue
         return $this->render('todo/todo_add.html.twig', [
             'add_form' => $form->createView(),
-            // 'ponderators' => $ponderators,
+            'ponderators' => $ponderators,
         ]);
     }
 
