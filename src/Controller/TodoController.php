@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
+use App\Entity\Ponderator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -41,11 +42,15 @@ class TodoController extends AbstractController
         $task = new Task();
         $form = $this->createForm(TaskType::class, $task);
 
+        // On récupère les pondérateurs
+        $ponderators = $this->getDoctrine()->getRepository(Ponderator::class)->findAll();
+
         // On traite le formulaire s’il a été remplis
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             // Si le formulaire a été envoyé
             $manager = $this->getDoctrine()->getManager();
+            dd($task);
             $manager->persist($task);
             $manager->flush();
             $this->addFlash('info', 'Commentaire ajouté');
@@ -55,6 +60,7 @@ class TodoController extends AbstractController
 
         return $this->render('todo/todo_add.html.twig', [
             'add_form' => $form->createView(),
+            'ponderators' => $ponderators,
         ]);
     }
 
