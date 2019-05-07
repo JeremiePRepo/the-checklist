@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
-use App\Entity\Ponderator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -45,18 +44,8 @@ class TodoController extends AbstractController
         // On traite le formulaire s’il a été remplis
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            // Formulaire validé, traitement
             $manager = $this->getDoctrine()->getManager();
-            // dd($task->getPonderators());
             $manager->persist($task);
-            // dd($task);
-            // foreach ($_POST['task']['ponderators'] as $key => $ponderator) {
-            //     dd($ponderator);
-            //     $manager->persist($ponderators);
-            // }
-            // $request->request->get('ponderators');
-            // $ponderators = $request->parameter('ponderators');
-            // $manager->persist($ponderators);
             $manager->flush();
             $this->addFlash('info', 'Nouvelle tâche ajoutée');
 

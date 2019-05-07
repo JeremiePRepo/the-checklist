@@ -50,11 +50,11 @@
     - [X] Créer l'entité Ponderator
     - [ ] Vue gestion des pondérateurs
     - [X] Ajouter un pondérateur
-    - [ ] Afficher les pondérateur dans la vue todo_index
-    - [ ] Ajouter des pondérateurs dans le formulaire de création de tâches
+    - [X] Afficher les pondérateur dans la vue todo_index
+    - [X] Ajouter des pondérateurs dans le formulaire de création de tâches
     - [ ] Supprimer
     - [ ] Modifier
-    - [ ] Ajouter/enlever des pondérateurs aux tâches
+    - [X] Ajouter/enlever des pondérateurs aux tâches
     - [ ] Ordonner les tâches
 
 ### Version Alpha 0.4+
