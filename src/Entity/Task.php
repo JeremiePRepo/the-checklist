@@ -58,6 +58,11 @@ class Task
      */
     private $ponderators;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $priority;
+
     public function __construct()
     {
         $this->ponderators = new ArrayCollection();
@@ -176,6 +181,18 @@ class Task
             $this->ponderators->removeElement($ponderator);
             $ponderator->removeTask($this);
         }
+
+        return $this;
+    }
+
+    public function getPriority(): ?int
+    {
+        return $this->priority;
+    }
+
+    public function setPriority(?int $priority): self
+    {
+        $this->priority = $priority;
 
         return $this;
     }

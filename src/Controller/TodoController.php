@@ -27,9 +27,18 @@ class TodoController extends AbstractController
     {
         $tasks = $this->getDoctrine()->getRepository(Task::class)->findAll();
 
-        return $this->render('todo/index.html.twig', [
-            'tasks' => $tasks,
-        ]);
+        foreach ($tasks as $task) {
+            $ponderators = $task->getPonderators();
+            $priority = 0;
+
+            foreach ($ponderators as $ponderator) {
+                $priority += $ponderator->getCoefficient();
+            }
+
+            $task->setPriority($priority);
+        }
+
+        return $this->render('todo/index.html.twig', compact('tasks'));
     }
 
     /**

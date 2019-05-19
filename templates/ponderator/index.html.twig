@@ -12,7 +12,7 @@
                 <th>Couleur</th>
                 <th>Coefficient</th>
                 <th>Tâches actuelles</th>
-                <th>Tâches totales</th>
+                <th>Tâches associés</th>
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
@@ -22,28 +22,16 @@
 
                 <tr>
                     <td>{{ ponderator.name }}</td>
-                    <td>couleur</td>
+                    <td>bientôt</td>
                     <td>{{ ponderator.coefficient }}</td>
-                    <td>tache 1, tache 2 ...</td>
-                    <td>999</td>
-                    <td>état</td>
+                    <td>bientôt</td>
+                    <td>bientôt</td>
+                    <td>bientôt</td>
                     <td>
                         <a href="{{ path('pond_edit', {'id' : ponderator.id}) }}" class="btn btn-primary btn-sm"><i class="fa fa-lightbulb-o"></i>&nbsp; Éditer</a>
                     </td>
                 </tr>
             {% endfor %}
-            <tr>
-                <td class="serial">1.</td>
-                <td class="avatar">
-                    <div class="round-img">
-                        <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
-                    </div>
-                </td>
-                <td> #5469 </td>
-                <td>  <span class="name">Louis Stanley</span> </td>
-                <td> <span class="product">iMax</span> </td>
-                <td><span class="count">231</span></td>
-            </tr>
         </tbody>
     </table>
 </div>

@@ -55,7 +55,7 @@
     - [ ] Supprimer
     - [ ] Modifier
     - [X] Ajouter/enlever des pondérateurs aux tâches
-    - [ ] Ordonner les tâches
+    - [X] Ordonner les tâches
 
 ### Version Alpha 0.4+
 
@@ -72,7 +72,17 @@
 6. Amélioration de l'interface
     - [ ] Ajouter formulaire de création de tâches dans la vue todo_index
     - [ ] Ajouter formulaire de création de pondérateur dans la vue pond_index
+    - [ ] Nettoyer l'interface des éléments "démo" du template (alertes, etc)
+    - [ ]
 7. AJAX
     - [ ] Affichage du contenu des tâches au clic pour la vue todo_index 
     - [ ] Ajout de tâche sans chargement pour la vue todo_index
     - [ ] Ajout de pondérateur sans chargement pour la vue pond_index
+
+### Version Bâta 0.8+
+
+8. Créer un serveur API
+9. Créer une interface en react
+10. Système de scoring
+11. Création de tâches partagées
+    - [ ] Les tâches partagées remportent des points en mode "compétition"
