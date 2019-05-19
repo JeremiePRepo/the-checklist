@@ -78,11 +78,12 @@
     - [ ] Affichage du contenu des tâches au clic pour la vue todo_index 
     - [ ] Ajout de tâche sans chargement pour la vue todo_index
     - [ ] Ajout de pondérateur sans chargement pour la vue pond_index
+8. Pondérateur spécial : deadline
 
-### Version Bâta 0.8+
+### Version Bâta 0.9+
 
-8. Créer un serveur API
-9. Créer une interface en react
-10. Système de scoring
-11. Création de tâches partagées
+9. Créer un serveur API
+10. Créer une interface en react
+11. Système de scoring
+12. Création de tâches partagées
     - [ ] Les tâches partagées remportent des points en mode "compétition"
