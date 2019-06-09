@@ -5,12 +5,16 @@ namespace App\Controller;
 use App\Entity\Ponderator;
 use App\Form\PonderatorType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
+ * Class PonderatorController
  * @Route("/ponderators", name="pond_")
- * */
+ * @package App\Controller
+ */
 class PonderatorController extends AbstractController
 {
     /**
@@ -25,6 +29,9 @@ class PonderatorController extends AbstractController
 
     /**
      * @Route("/add", name="add")
+     *
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function Add(Request $request)
     {
@@ -49,6 +56,9 @@ class PonderatorController extends AbstractController
 
     /**
      * @Route("/edit/{id}", name="edit")
+     *
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function Edit(Request $request)
     {

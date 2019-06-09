@@ -162,7 +162,6 @@ fabric.properties
 /bin/*
 !bin/console
 !bin/symfony_requirements
-/vendor/
 
 # Assets and user uploads
 /web/bundles/
@@ -170,7 +169,6 @@ fabric.properties
 
 # PHPUnit
 /app/phpunit.xml
-/phpunit.xml
 
 # Build data
 /build/
@@ -182,7 +180,7 @@ fabric.properties
 **/Entity/*~
 
 # Embedded web-server pid file
-/.web-server-pid
+# /.web-server-pid
 
 ### Symfony Patch ###
 /web/css/

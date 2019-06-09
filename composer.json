@@ -9,6 +9,7 @@
         "snilius/twig-sort-by-field": "^0.1.5",
         "symfony/asset": "4.2.*",
         "symfony/console": "4.2.*",
+        "symfony/debug": "4.2.*",
         "symfony/dotenv": "4.2.*",
         "symfony/expression-language": "4.2.*",
         "symfony/flex": "^1.1",

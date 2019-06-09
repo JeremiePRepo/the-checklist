@@ -5,10 +5,13 @@ namespace App\Controller;
 use App\Entity\Task;
 use App\Form\TaskType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
+ * Class TodoController
  * todo_index
  * todo_add
  * todo_edit
@@ -17,7 +20,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  * todo_uncheck.
  *
  * @Route("/todolist", name="todo_")
- * */
+ * @package App\Controller
+ */
 class TodoController extends AbstractController
 {
     /**
@@ -43,6 +47,9 @@ class TodoController extends AbstractController
 
     /**
      * @Route("/add", name="add")
+     *
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function Add(Request $request)
     {
@@ -70,6 +77,10 @@ class TodoController extends AbstractController
 
     /**
      * @Route("/edit/{id}", name="edit", requirements={"id":"\d+"})
+     *
+     * @param Task $task
+     * @param Request $request
+     * @return RedirectResponse| Response
      */
     public function Edit(Task $task, Request $request)
     {
@@ -95,6 +106,9 @@ class TodoController extends AbstractController
 
     /**
      * @route("/delete/{id}", name="delete", requirements={"id":"\d+"})
+     *
+     * @param Task $task
+     * @return RedirectResponse
      */
     public function delete(Task $task)
     {
@@ -109,6 +123,9 @@ class TodoController extends AbstractController
 
     /**
      * @route("/check/{id}", name="check", requirements={"id":"\d+"})
+     *
+     * @param Task $task
+     * @return RedirectResponse
      */
     public function check(Task $task)
     {
@@ -124,6 +141,9 @@ class TodoController extends AbstractController
 
     /**
      * @route("/uncheck/{id}", name="uncheck", requirements={"id":"\d+"})
+     *
+     * @param Task $task
+     * @return RedirectResponse
      */
     public function unCheck(Task $task)
     {
