@@ -9,20 +9,51 @@
 
 [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables)
 
-| **name**        | **route**         |
-|-----------------|-------------------|
-| homepage        | /                 |
-| todolist        | /todolist         |
-| add_task        | /todolist/add     |
-| edit_task       | /todolist/edit    |
-| ponderators     | /ponderators      |
-| ponderator      | /ponderators/{id} |
-| add_ponderator  | /ponderators/add  |
-| edit_ponderator | /ponderators/edit |
-| login           | /login            |
-| sign_in         | /sign-in          |
-| account         | /account          |
+| **name**        | **route**         |     |
+|-----------------|-------------------|-----|
+| homepage        | /                 | [X] |
+| todolist        | /todolist         | [X] | 
+| add_task        | /todolist/add     | [X] |
+| edit_task       | /todolist/edit    | [X] |
+| ponderators     | /ponderators      | [X] |
+| ponderator      | /ponderators/{id} | [X] |
+| add_ponderator  | /ponderators/add  | [X] |
+| edit_ponderator | /ponderators/edit | [X] |
+| login           | /login            | [X] |
+| register        | /register         | [X] |
+| account         | /account          | [ ] |
 
+[10 juin 2019] php bin/console debug:router :
+ -------------------------- -------- -------- ------ -----------------------------------
+  Name                       Method   Scheme   Host   Path
+ -------------------------- -------- -------- ------ -----------------------------------
+  _twig_error_test           ANY      ANY      ANY    /_error/{code}.{_format}
+  _wdt                       ANY      ANY      ANY    /_wdt/{token}
+  _profiler_home             ANY      ANY      ANY    /_profiler/
+  _profiler_search           ANY      ANY      ANY    /_profiler/search
+  _profiler_search_bar       ANY      ANY      ANY    /_profiler/search_bar
+  _profiler_phpinfo          ANY      ANY      ANY    /_profiler/phpinfo
+  _profiler_search_results   ANY      ANY      ANY    /_profiler/{token}/search/results
+  _profiler_open_file        ANY      ANY      ANY    /_profiler/open
+  _profiler                  ANY      ANY      ANY    /_profiler/{token}
+  _profiler_router           ANY      ANY      ANY    /_profiler/{token}/router
+  _profiler_exception        ANY      ANY      ANY    /_profiler/{token}/exception
+  _profiler_exception_css    ANY      ANY      ANY    /_profiler/{token}/exception.css
+  pond_index                 ANY      ANY      ANY    /ponderators/
+  pond_add                   ANY      ANY      ANY    /ponderators/add
+  pond_edit                  ANY      ANY      ANY    /ponderators/edit/{id}
+  pond_delete                ANY      ANY      ANY    /ponderators/delete/{id}
+  app_register               ANY      ANY      ANY    /register
+  app_login                  ANY      ANY      ANY    /login
+  app_logout                 ANY      ANY      ANY    /logout
+  todo_index                 ANY      ANY      ANY    /todolist/
+  todo_add                   ANY      ANY      ANY    /todolist/add
+  todo_edit                  ANY      ANY      ANY    /todolist/edit/{id}
+  todo_delete                ANY      ANY      ANY    /todolist/delete/{id}
+  todo_check                 ANY      ANY      ANY    /todolist/check/{id}
+  todo_uncheck               ANY      ANY      ANY    /todolist/uncheck/{id}
+  homepage                   ANY      ANY      ANY    /
+ -------------------------- -------- -------- ------ -----------------------------------
 
 ## TODO
 
@@ -63,7 +94,7 @@
 
 4. Ajout des utilisateurs
     - [X] Création de l'entité User
-    - [ ] Formulaire d'inscription
+    - [X] Formulaire d'inscription
     - [ ] Intégration Homepage
     - [X] Login
     - [ ] Logout
