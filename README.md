@@ -62,7 +62,7 @@
 ### Version Alpha 0.4+
 
 4. Ajout des utilisateurs
-    - [ ] Création de l'entité User
+    - [X] Création de l'entité User
     - [ ] Formulaire d'inscription
     - [ ] Intégration Homepage
     - [ ] Login
