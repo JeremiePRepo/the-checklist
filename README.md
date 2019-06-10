@@ -65,7 +65,7 @@
     - [X] Création de l'entité User
     - [ ] Formulaire d'inscription
     - [ ] Intégration Homepage
-    - [ ] Login
+    - [X] Login
     - [ ] Logout
     - [ ] Page Account
     - [ ] Associez les autres entités aux Users
