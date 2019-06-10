@@ -87,3 +87,4 @@
 11. Système de scoring
 12. Création de tâches partagées
     - [ ] Les tâches partagées remportent des points en mode "compétition"
+13. Popup de confirmation lors de la suppression d'un élément

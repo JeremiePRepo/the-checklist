@@ -80,4 +80,21 @@ class PonderatorController extends AbstractController
             'add_form' => $form->createView(),
         ]);
     }
+
+    /**
+     * @route("/delete/{id}", name="delete", requirements={"id":"\d+"})
+     *
+     * @param Ponderator $ponderator
+     * @return RedirectResponse
+     */
+    public function delete(Ponderator $ponderator)
+    {
+        $manager = $this->getDoctrine()->getManager();
+        $manager->remove($ponderator);
+        $manager->flush();
+
+        $this->addFlash('info', 'La tâche a bien été supprimé');
+
+        return $this->redirectToRoute('pond_index');
+    }
 }

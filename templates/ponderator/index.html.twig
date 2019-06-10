@@ -29,6 +29,7 @@
                     <td>bientôt</td>
                     <td>
                         <a href="{{ path('pond_edit', {'id' : ponderator.id}) }}" class="btn btn-primary btn-sm"><i class="fa fa-lightbulb-o"></i>&nbsp; Éditer</a>
+                        <a class="fa fa-times" href='{{ path('pond_delete', {'id' : ponderator.id}) }}'></a>
                     </td>
                 </tr>
             {% endfor %}
