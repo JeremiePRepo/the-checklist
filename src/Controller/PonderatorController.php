@@ -57,12 +57,13 @@ class PonderatorController extends AbstractController
     /**
      * @Route("/edit/{id}", name="edit")
      *
+     * @param Ponderator $ponderator
      * @param Request $request
      * @return RedirectResponse|Response
      */
-    public function Edit(Request $request)
+    public function Edit(Ponderator $ponderator, Request $request)
     {
-        $ponderator = new Ponderator();
+        // Prépare le formulaire
         $form = $this->createForm(PonderatorType::class, $ponderator);
 
         $form->handleRequest($request);
@@ -71,7 +72,7 @@ class PonderatorController extends AbstractController
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($ponderator);
             $manager->flush();
-            $this->addFlash('info', 'Pondérateur ajouté');
+            $this->addFlash('info', 'Pondérateur modifié');
 
             return $this->redirectToRoute('pond_index');
         }

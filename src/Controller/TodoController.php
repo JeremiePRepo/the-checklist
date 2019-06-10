@@ -80,7 +80,7 @@ class TodoController extends AbstractController
      *
      * @param Task $task
      * @param Request $request
-     * @return RedirectResponse| Response
+     * @return RedirectResponse|Response
      */
     public function Edit(Task $task, Request $request)
     {

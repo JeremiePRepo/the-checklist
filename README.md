@@ -49,11 +49,13 @@
 3. CRUD Pondérateurs
     - [X] Créer l'entité Ponderator
     - [ ] Vue gestion des pondérateurs
+        - [ ] Popup de confirmation lors de la suppression d'un élément
+        - [ ] Revoir icones
     - [X] Ajouter un pondérateur
     - [X] Afficher les pondérateur dans la vue todo_index
     - [X] Ajouter des pondérateurs dans le formulaire de création de tâches
-    - [ ] Supprimer
-    - [ ] Modifier
+    - [X] Supprimer
+    - [X] Modifier
     - [X] Ajouter/enlever des pondérateurs aux tâches
     - [X] Ordonner les tâches
 
@@ -87,4 +89,3 @@
 11. Système de scoring
 12. Création de tâches partagées
     - [ ] Les tâches partagées remportent des points en mode "compétition"
-13. Popup de confirmation lors de la suppression d'un élément
